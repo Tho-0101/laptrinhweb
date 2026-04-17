@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      BikeMarket - Nền Tảng Giao Dịch Xe Đạp Thể Thao Đã Qua Sử Dụng
+    </title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="top-notice-bar">
+      <div class="container d-flex justify-content-between">
+        <span>Hotline: 0918000800 / 09889967400</span>
+        <a href="./index.html#footer-contact" class="top-contact-link"
+          >Liên hệ</a
+        >
+      </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg sticky-top shadow-sm bm-navbar py-3">
+      <div class="container">
+        <a class="navbar-brand fw-bold fs-4" href="./index.html"> MICRA </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#homeNavbar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="homeNavbar">
+          <ul class="navbar-nav mx-auto fw-medium">
+            <li class="nav-item">
+              <a class="nav-link active" href="./index.html">Trang chủ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./listings.html">Mua xe</a>
+            </li>
+            <li class="nav-item" id="navBanXe" style="display: none">
+              <a class="nav-link" href="./listings.html#sell">Bán xe</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./index.html#">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./index.html#">Liên hệ</a>
+            </li>
+          </ul>
+          <div
+            class="d-flex gap-2 mt-3 mt-lg-0 align-items-center nav-right-tools"
+          >
+            <div class="nav-icon-cluster">
+              <a
+                id="btnLoginNav"
+                href="./login.html#login"
+                class="nav-icon-btn"
+                aria-label="login"
+              >
+                <i class="bi bi-person-circle"></i>
+              </a>
+              <a
+                href="./listings.html"
+                class="nav-icon-btn"
+                aria-label="search listings"
+              >
+                <i class="bi bi-search"></i>
+              </a>
+              <div class="nav-cart-container">
+                <button
+                  id="navCartBtn"
+                  class="nav-icon-btn nav-cart-btn"
+                  aria-label="shopping cart"
+                  aria-expanded="false"
+                >
+                  <i class="bi bi-cart-fill"></i>
+                  <span class="quick-cart-badge" id="cartBadge">0</span>
+                </button>
+                <div id="cartDropdown" class="cart-dropdown">
+                  <div class="cart-dropdown-header">
+                    <h6 class="mb-0">Giỏ hàng của bạn</h6>
+                    <button
+                      type="button"
+                      class="btn-close btn-sm"
+                      id="closeCartDropdown"
+                    ></button>
+                  </div>
+                  <div id="cartItems" class="cart-items-container">
+                    <div class="empty-cart-message">
+                      <i class="bi bi-cart-x"></i>
+                      <p>Giỏ hàng trống</p>
+                    </div>
+                  </div>
+                  <div class="cart-dropdown-footer">
+                    <div class="cart-total">
+                      <span>Tổng:</span>
+                      <span id="cartTotal" class="fw-bold">0 ₫</span>
+                    </div>
+                    <a
+                      href="./listings.html"
+                      class="btn btn-primary btn-sm w-100"
+                      >Tiếp tục mua sắm</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button
+              id="btnLogoutNav"
+              class="btn btn-outline-danger btn-sm fw-semibold"
+              style="display: none"
+            >
+              <i class="bi bi-box-arrow-right"></i> Đăng xuất
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <div id="alertBox"></div>
+      <section class="hero-banner-micra">
+        <img
+          class="hero-banner-image"
+          src="https://plus.unsplash.com/premium_photo-1683442814148-78aa260ac18e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGJpa2V8ZW58MHx8MHx8fDA%3D"
+          alt="hero banner"
+        />
+        <div class="container position-relative">
+          <div class="hero-banner-content">
+            <h1>🚴 BikeMarket - Mua Bán Xe Đạp Thể Thao</h1>
+            <p>Tìm chiếc xe đạp yêu thích hoặc bán chiếc xe của bạn</p>
+            <div class="hero-cta-buttons mt-4">
+              <a href="./listings.html" class="btn btn-primary btn-lg fw-bold">
+                <i class="bi bi-search"></i> Mua Xe
+              </a>
+              <a
+                href="./login.html#register"
+                class="btn btn-light btn-lg fw-bold ms-3"
+              >
+                <i class="bi bi-plus-circle"></i> Bán Xe
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Product Section with Category Sidebar -->
+      <div class="container mt-5">
+        <div class="row g-4 align-items-start">
+          <aside class="col-lg-3">
+            <div class="category-sidebar">
+              <div class="category-header">
+                <i class="bi bi-list"></i>
+                <span>DANH MỤC SẢN PHẨM</span>
+              </div>
+
+              <!-- Thương Hiệu Group -->
+              <ul class="category-menu list-unstyled mb-0">
+                <li>
+                  <a href="./listings.html?keyword=Xe đạp Xgame cũ">
+                    <i class="bi bi-dot"></i>
+                    <span>Xe đạp Xgame cũ</span>
+                    <span class="badge">24</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="./listings.html?keyword=Xe đạp thể thao cũ">
+                    <i class="bi bi-dot"></i>
+                    <span>Xe đạp thể thao cũ</span>
+                    <span class="badge">45</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="./listings.html?keyword=Xe đạp xếp cũ và mới">
+                    <i class="bi bi-dot"></i>
+                    <span>Xe đạp xếp cũ và mới</span>
+                    <span class="badge">18</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="./listings.html?keyword=Cho thuê xe đạp">
+                    <i class="bi bi-dot"></i>
+                    <span>Cho thuê xe đạp</span>
+                    <span class="badge">12</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="./listings.html?keyword=Xe đạp Martin asama inox">
+                    <i class="bi bi-dot"></i>
+                    <span>Xe đạp Martin, asama, inox cũ và mới</span>
+                    <span class="badge">28</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="./listings.html?keyword=Xe đạp phượng hoàng">
+                    <i class="bi bi-dot"></i>
+                    <span>Xe đạp phượng hoàng</span>
+                    <span class="badge">19</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="./listings.html?keyword=Xe đạp thiếu nhi">
+                    <i class="bi bi-dot"></i>
+                    <span>Xe đạp dành cho thiếu nhi</span>
+                    <span class="badge">22</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="./listings.html?keyword=Xe đạp nhật bãi">
+                    <i class="bi bi-dot"></i>
+                    <span>Xe đạp nhật hàng bãi</span>
+                    <span class="badge">31</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="./listings.html?keyword=Xe đạp độc lạ">
+                    <i class="bi bi-dot"></i>
+                    <span>Xe đạp độc lạ</span>
+                    <span class="badge">8</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="./listings.html?keyword=Xe đạp cuộc xe đạp đua">
+                    <i class="bi bi-dot"></i>
+                    <span>Xe đạp cuộc, xe đạp đua</span>
+                    <span class="badge">36</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="./listings.html?keyword=Xe đạp thái">
+                    <i class="bi bi-dot"></i>
+                    <span>Xe đạp thái</span>
+                    <span class="badge">15</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="./listings.html?keyword=Xe đạp thủy thủ cổ điển">
+                    <i class="bi bi-dot"></i>
+                    <span>Xe đạp thủy thủ cổ điển</span>
+                    <span class="badge">9</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="./listings.html?keyword=Xe đạp fixed gear">
+                    Xe đạp Fixed Gear
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </aside>
+
+          <div class="col-lg-9">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h2 class="catalog-title m-0">Sản phẩm nổi bật</h2>
+              <a href="./listings.html" class="text-decoration-none fw-medium"
+                >Xem tất cả <i class="bi bi-arrow-right"></i
+              ></a>
+            </div>
+            <div
+              class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-3 catalog-products"
+              id="homeProductList"
+            ></div>
+
+            <div class="product-group">
+              <h2 class="catalog-title m-0">Sản phẩm bán chạy</h2>
+              <div
+                class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-3 catalog-products"
+                id="homeProductListHot"
+              ></div>
+            </div>
+
+            <div class="product-group">
+              <h2 class="catalog-title m-0">Xe đạp đua,xe đạp cuộc</h2>
+              <div
+                class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-3 catalog-products"
+                id="homeProductListRace"
+              ></div>
+            </div>
+
+            <div class="product-group">
+              <h2 class="catalog-title m-0">Xe đạp thể thao</h2>
+              <div
+                class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-3 catalog-products"
+                id="homeProductListSport"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="bm-footer bg-dark text-white pt-5 pb-4 mt-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 mb-3">
+            <h5 class="fw-bold">
+              <i class="bi bi-bicycle text-primary"></i> BikeMarket
+            </h5>
+            <p class="text-secondary small">
+              Nền tảng mua bán xe đạp thể thao cũ, kết nối cộng đồng đam mê xe
+              đạp.
+            </p>
+          </div>
+          <div class="col-md-4 mb-3">
+            <h6 class="fw-bold">Khám phá</h6>
+            <ul class="list-unstyled small">
+              <li><a href="./listings.html">Mua xe</a></li>
+              <li><a href="./chat.html">Thương lượng</a></li>
+              <li><a href="./profile.html">Quản lý tài khoản</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4 mb-3" id="footer-contact">
+            <h6 class="fw-bold">Liên hệ</h6>
+            <p class="small text-secondary mb-1">
+              Email: support@bikemarket.vn
+            </p>
+            <p class="small text-secondary mb-0">Hotline: 1900 1234</p>
+          </div>
+        </div>
+        <hr class="border-secondary" />
+        <div class="small text-secondary text-center">
+          © 2026 BikeMarket. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/state.js"></script>
+    <script src="./js/utils.js"></script>
+    <script src="./js/api.js"></script>
+    <script src="./js/auth.js"></script>
+    <script src="./js/listings.js"></script>
+    <script src="./js/chat.js"></script>
+    <script src="./js/upload.js"></script>
+    <script src="./js/cart.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
