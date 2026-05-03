@@ -1,0 +1,475 @@
+/**
+ * BikeMarket - Custom Styles v3.0
+ * Bootstrap 5 Dark Theme
+ * UPDATED: 2024-04-29
+ */
+
+/* ============================================
+   VARIABLES
+   ============================================ */
+:root {
+    --primary: #10b981;
+    --primary-dark: #059669;
+    --dark: #0f172a;
+    --dark-2: #1e293b;
+    --dark-3: #334155;
+    --border-dark: #334155;
+    --gray: #94a3b8;
+    --gray-dark: #64748b;
+}
+
+/* ============================================
+   GLOBAL STYLES
+   ============================================ */
+* {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+body {
+    background: var(--dark) !important;
+    color: #ffffff !important;
+    min-height: 100vh;
+}
+
+/* ============================================
+   NAVBAR
+   ============================================ */
+.navbar {
+    background: var(--dark-2) !important;
+    border-bottom: 1px solid var(--dark-3);
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: #fff !important;
+    letter-spacing: -1px;
+}
+
+.navbar-brand .text-success {
+    color: var(--primary) !important;
+}
+
+.nav-link {
+    color: var(--gray) !important;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--primary) !important;
+}
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+.hero-section {
+    background: linear-gradient(135deg, var(--dark-2) 0%, var(--dark) 100%);
+    padding: 4rem 0;
+    margin-bottom: 2rem;
+}
+
+.hero-section h1 {
+    font-weight: 900;
+    margin-bottom: 1.5rem;
+}
+
+.hero-section .text-success {
+    color: var(--primary) !important;
+}
+
+/* ============================================
+   SEARCH BAR
+   ============================================ */
+.search-bar {
+    margin-top: 2rem;
+}
+
+.search-bar .form-control {
+    background: var(--dark-2) !important;
+    border: 1px solid var(--dark-3);
+    color: #fff !important;
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px 0 0 50px;
+}
+
+.search-bar .form-control:focus {
+    background: var(--dark-2) !important;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 0.2rem rgba(16, 185, 129, 0.25);
+    color: #fff !important;
+}
+
+.search-bar .btn {
+    border-radius: 0 50px 50px 0;
+    padding: 0.75rem 2rem;
+}
+
+/* ============================================
+   BIKE CARDS
+   ============================================ */
+.bike-card {
+    background: var(--dark-2) !important;
+    border: 1px solid var(--dark-3);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s;
+    cursor: pointer;
+    height: 100%;
+}
+
+.bike-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(16, 185, 129, 0.15);
+    border-color: var(--primary);
+}
+
+.bike-card-image {
+    width: 100%;
+    height: 200px;
+    background: var(--dark-3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    color: var(--gray);
+}
+
+.bike-card-body {
+    padding: 1.25rem;
+}
+
+.bike-card-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff !important;
+    margin-bottom: 0.75rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.bike-card-price {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--primary) !important;
+    margin-bottom: 0.5rem;
+}
+
+.bike-card-location {
+    font-size: 0.875rem;
+    color: var(--gray) !important;
+    margin-bottom: 0.5rem;
+}
+
+.bike-card-meta {
+    font-size: 0.75rem;
+    color: var(--gray-dark) !important;
+}
+
+/* ============================================
+   FILTERS
+   ============================================ */
+.filters-container {
+    background: var(--dark-2) !important;
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid var(--dark-3);
+}
+
+.filters-container .form-select,
+.filters-container .form-control {
+    background: var(--dark) !important;
+    border: 1px solid var(--dark-3);
+    color: #fff !important;
+}
+
+.filters-container .form-select:focus,
+.filters-container .form-control:focus {
+    background: var(--dark) !important;
+    border-color: var(--primary);
+    color: #fff !important;
+    box-shadow: 0 0 0 0.2rem rgba(16, 185, 129, 0.25);
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.footer {
+    background: var(--dark-2) !important;
+    border-top: 1px solid var(--dark-3);
+    padding: 3rem 0 1rem;
+    margin-top: 4rem;
+}
+
+.footer h5,
+.footer h6 {
+    color: #fff !important;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.footer .text-success {
+    color: var(--primary) !important;
+}
+
+.footer ul {
+    padding: 0;
+    list-style: none;
+}
+
+.footer ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer a {
+    color: var(--gray) !important;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer a:hover {
+    color: var(--primary) !important;
+}
+
+.footer .text-muted {
+    color: var(--gray-dark) !important;
+}
+
+/* ============================================
+   CUSTOM COMPONENTS
+   ============================================ */
+.bg-dark-2-custom {
+    background: var(--dark-2) !important;
+}
+
+.border-dark-custom {
+    border-color: var(--dark-3) !important;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 4rem 2rem;
+    color: var(--gray) !important;
+}
+
+.empty-state i {
+    font-size: 5rem;
+    margin-bottom: 1.5rem;
+    color: var(--gray-dark);
+}
+
+.empty-state h3 {
+    color: #fff !important;
+    margin-bottom: 0.5rem;
+}
+
+/* ============================================
+   BUTTONS
+   ============================================ */
+.btn-success {
+    background: var(--primary) !important;
+    border-color: var(--primary) !important;
+    color: #fff !important;
+}
+
+.btn-success:hover {
+    background: var(--primary-dark) !important;
+    border-color: var(--primary-dark) !important;
+}
+
+.btn-outline-success {
+    border-color: var(--primary) !important;
+    color: var(--primary) !important;
+}
+
+.btn-outline-success:hover {
+    background: var(--primary) !important;
+    border-color: var(--primary) !important;
+    color: #fff !important;
+}
+
+/* ============================================
+   FORMS
+   ============================================ */
+.form-control,
+.form-select {
+    background: var(--dark-2) !important;
+    border: 1px solid var(--dark-3);
+    color: #fff !important;
+}
+
+.form-control:focus,
+.form-select:focus {
+    background: var(--dark-2) !important;
+    border-color: var(--primary);
+    color: #fff !important;
+    box-shadow: 0 0 0 0.2rem rgba(16, 185, 129, 0.25);
+}
+
+.form-control::placeholder {
+    color: var(--gray-dark) !important;
+}
+
+.form-label {
+    color: var(--gray) !important;
+    font-weight: 500;
+}
+
+/* ============================================
+   BADGES
+   ============================================ */
+.badge {
+    font-weight: 600;
+    padding: 0.5em 1em;
+}
+
+.bg-success {
+    background-color: var(--primary) !important;
+}
+
+/* ============================================
+   UTILITIES
+   ============================================ */
+.text-success {
+    color: var(--primary) !important;
+}
+
+.text-muted {
+    color: var(--gray) !important;
+}
+
+hr {
+    border-color: var(--dark-3) !important;
+    opacity: 1;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 2rem 0;
+    }
+    
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+    
+    .bike-card-image {
+        height: 150px;
+    }
+}
+
+/* ============================================
+   NEW BIKES SECTION
+   ============================================ */
+.new-bikes-section {
+    background: linear-gradient(135deg, #1a472a 0%, #0f172a 100%);
+    padding: 30px 0;
+    margin-bottom: 40px;
+    border-radius: 12px;
+}
+
+.new-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    animation: pulse 2s infinite;
+    z-index: 10;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+.time-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    color: #10b981;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.7rem;
+    z-index: 10;
+}
+
+/* ============================================
+   FOOTER ENHANCEMENTS
+   ============================================ */
+.footer .social-links a {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    background: var(--dark-3);
+    border-radius: 50%;
+    color: var(--gray);
+    transition: all 0.3s;
+}
+
+.footer .social-links a:hover {
+    background: var(--primary);
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+.footer .footer-links a {
+    color: var(--gray);
+    text-decoration: none;
+    transition: all 0.3s;
+    display: block;
+}
+
+.footer .footer-links a:hover {
+    color: var(--primary);
+    padding-left: 5px;
+}
+
+.footer .footer-links i {
+    font-size: 0.75rem;
+    margin-right: 5px;
+}
+
+.footer .contact-info li {
+    color: var(--gray);
+    font-size: 0.9rem;
+}
+
+.footer .contact-info i {
+    color: var(--primary);
+    margin-right: 8px;
+    width: 20px;
+}
+
+.footer .newsletter input {
+    background: var(--dark) !important;
+    border-color: var(--dark-3) !important;
+    color: #fff !important;
+}
+
+.footer .newsletter input:focus {
+    border-color: var(--primary) !important;
+    box-shadow: 0 0 0 0.2rem rgba(16, 185, 129, 0.25);
+}
+
+.footer .newsletter .btn {
+    border-color: var(--primary) !important;
+}
