@@ -1,0 +1,290 @@
+/* ============================================
+   DASHBOARD STYLES
+   For: Buyer, Seller, Inspector, Admin Dashboards
+   ============================================ */
+
+/* Dashboard Header */
+.dashboard-header {
+    margin-bottom: 2rem;
+}
+
+.dashboard-header h2 {
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.dashboard-header .text-muted {
+    font-size: 1rem;
+}
+
+/* Stats Cards */
+.stats-card {
+    background: var(--dark-2);
+    border: 1px solid var(--dark-3);
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.stats-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.stats-card i {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.stats-card h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 1rem 0 0.5rem;
+}
+
+.stats-card p {
+    margin: 0;
+    font-size: 0.875rem;
+}
+
+/* Quick Actions */
+.quick-actions {
+    background: var(--dark-2);
+    border: 1px solid var(--dark-3);
+    border-radius: 12px;
+    padding: 1.5rem;
+}
+
+.quick-actions h5 {
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.quick-actions .btn {
+    margin-bottom: 0.75rem;
+}
+
+/* Dashboard Tables */
+.dashboard-table {
+    background: var(--dark-2);
+    border: 1px solid var(--dark-3);
+    border-radius: 12px;
+    padding: 1.5rem;
+}
+
+.dashboard-table h5 {
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.table-dark {
+    --bs-table-bg: var(--dark-2);
+    --bs-table-border-color: var(--dark-3);
+}
+
+.table-dark th {
+    border-color: var(--dark-3);
+    font-weight: 600;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--gray);
+}
+
+.table-dark td {
+    border-color: var(--dark-3);
+    vertical-align: middle;
+}
+
+.table-hover tbody tr {
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.table-hover tbody tr:hover {
+    background-color: var(--dark-3) !important;
+}
+
+/* Dashboard Widgets */
+.dashboard-widget {
+    background: var(--dark-2);
+    border: 1px solid var(--dark-3);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.widget-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.widget-header h5 {
+    margin: 0;
+    font-weight: 600;
+}
+
+.widget-header .btn-sm {
+    font-size: 0.875rem;
+}
+
+/* Empty State */
+.empty-state {
+    text-align: center;
+    padding: 3rem 1rem;
+    color: var(--gray);
+}
+
+.empty-state i {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    opacity: 0.5;
+}
+
+.empty-state h5 {
+    margin-bottom: 0.5rem;
+    color: #fff;
+}
+
+.empty-state p {
+    margin-bottom: 1.5rem;
+}
+
+/* Chart Container */
+.chart-container {
+    position: relative;
+    height: 300px;
+    margin-top: 1rem;
+}
+
+/* Rating Display */
+.rating-display {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.rating-display .stars {
+    color: #fbbf24;
+    font-size: 1.2rem;
+}
+
+.rating-display .rating-value {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.rating-display .rating-count {
+    color: var(--gray);
+    font-size: 0.875rem;
+}
+
+/* Activity Feed */
+.activity-feed {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.activity-item {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    border-bottom: 1px solid var(--dark-3);
+    transition: background-color 0.2s;
+}
+
+.activity-item:last-child {
+    border-bottom: none;
+}
+
+.activity-item:hover {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.activity-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.activity-icon i {
+    font-size: 1.2rem;
+}
+
+.activity-content {
+    flex: 1;
+}
+
+.activity-content strong {
+    color: #fff;
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+.activity-content p {
+    margin: 0;
+    font-size: 0.875rem;
+    color: var(--gray);
+}
+
+.activity-time {
+    font-size: 0.75rem;
+    color: var(--gray-dark);
+    margin-top: 0.25rem;
+}
+
+/* Dashboard Grid */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Progress Bar */
+.progress {
+    height: 8px;
+    background: var(--dark-3);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    background: linear-gradient(90deg, var(--primary), var(--primary-dark));
+}
+
+/* Badge Variants */
+.badge {
+    font-weight: 500;
+    font-size: 0.75rem;
+    padding: 0.35rem 0.75rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .stats-card {
+        margin-bottom: 1rem;
+    }
+
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .widget-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .activity-item {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+}
